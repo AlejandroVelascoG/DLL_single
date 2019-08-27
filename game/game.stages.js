@@ -12,18 +12,17 @@
  module.exports = function(stager, settings) {
 
       stager
-         .next('bienvenida')
          .next('instructions')
-         .next('tutorial_training')
-         .next('quiz')
+         .next('tutorial')
+         // .next('quiz')
          .repeat('prep', settings.TRAINING)
-         .next('debrief')
+         // .next('debrief')
          .next('end')
          .gameover();
 
-     stager.extendStage('tutorial_training', {
+     stager.extendStage('tutorial', {
        steps: [
-         'tutorialTraining',
+         'tutorial_Training',
          'puntaje_training'
        ]
      });
@@ -39,11 +38,11 @@
      // Modify the stager to skip one stage.
      // stager.skip('bienvenida');
      // stager.skip('instructions');
-      stager.skip('tutorial_training');
+      // stager.skip('tutorial');
      //stager.skip('quiz');
      // stager.skip('prep');
      // stager.skip('debrief');
-      stager.skip('end');
+      // stager.skip('end');
 
 
 

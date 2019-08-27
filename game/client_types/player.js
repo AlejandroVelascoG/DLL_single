@@ -55,22 +55,6 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
         // this.debugInfo = node.widgets.append('DebugInfo', header)
     });
 
-    stager.extendStep('bienvenida', {
-        donebutton: false,
-        frame: 'bienvenida.htm',
-        cb: function(){
-          var numUsuario = node.player.id;
-          console.log('************************************');
-          console.log('Número de usuario: ', numUsuario);
-          console.log('************************************');
-          W.setInnerHTML('numUsuario', numUsuario);
-          var continuar = W.getElementById('continuar');
-          continuar.onclick = function() {
-            node.done();
-          }
-        }
-    });
-
     stager.extendStep('instructions', {
         donebutton: false,
         frame: 'instructions.htm',
@@ -82,7 +66,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
         }
     });
 
-    stager.extendStep('tutorialTraining', {
+    stager.extendStep('tutorial_Training', {
         donebutton: false,
         frame: 'tutorial_training.htm',
         cb: function(){
@@ -265,32 +249,6 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
       }
     });
 
-    stager.extendStep('quiz', {
-      donebutton: false,
-      frame: 'quiz.htm',
-      done: function() {
-            node.say('quiz-over');
-        },
-      cb: function() {
-          var button, QUIZ;
-
-          QUIZ = W.getFrameWindow().QUIZ;
-          button = W.getElementById('submitQuiz');
-
-          node.on('check-quiz', function() {
-              var answers;
-              answers = QUIZ.checkAnswers(button);
-              if (answers.correct || node.game.visualTimer.isTimeup()) {
-                  node.emit('INPUT_DISABLE');
-                  // On Timeup there are no answers.
-                  // node.done(answers);
-                  node.done();
-              }
-          });
-          console.log('Quiz');
-          }
-});
-
 stager.extendStep('training', {
     donebutton: false,
     frame: 'training.htm',
@@ -458,17 +416,6 @@ stager.extendStep('puntaje', {
       node.done();
     };
   }
-});
-
-stager.extendStep('debrief', {
-    donebutton: false,
-    frame: 'debrief.htm',
-    cb: function() {
-      var continuar = W.getElementById('continuar');
-      continuar.onclick = function() {
-        node.done();
-      };
-    }
 });
 
 stager.extendStep('end', {
