@@ -136,35 +136,14 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
       var sendh = []
       var dict = {};
 
-      for (var i=1; i < 17; i++) {
+      for (var i=1; i < 13; i++) {
         as[i - 1] = 'A' + i + '.jpg';
-      }
-
-      for (var i=1; i < 17; i++) {
         bs[i - 1] = 'B' + i + '.jpg';
-      }
-
-      for (var i=1; i < 17; i++) {
         cs[i - 1] = 'C' + i + '.jpg';
-      }
-
-      for (var i=1; i < 17; i++) {
         ds[i - 1] = 'D' + i + '.jpg';
-      }
-
-      for(var i = 1; i < 17; i++){
         dict[as[i]] = "A";
-      }
-
-      for(var i = 1; i < 17; i++){
         dict[bs[i]] = "B";
-      }
-
-      for(var i = 1; i < 17; i++){
         dict[cs[i]] = "C";
-      }
-
-      for(var i = 1; i < 17; i++){
         dict[ds[i]] = "D";
       }
 

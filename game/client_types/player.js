@@ -275,6 +275,14 @@ stager.extendStep('training', {
         var claves = MESSAGE[2];
         var raza = MESSAGE[3];
 
+        // console.log('Perros: ', perros);
+        if (perros == 'terrier') {
+          texto = 'Observe que los perros de raza C tienen orejas un poco más puntiagudas, el pelaje un poco más áspero, y suelen llevar la cola parada.';
+        } else {
+          texto = 'Observe que los perros de raza B tienen el pelaje de tonos más claro y parduzco, y su contextura es más gruesa tanto de cuerpo como de hocico.';
+        }
+        W.setInnerHTML('inst', texto);
+
   var revision;
 
   revision = function(){
