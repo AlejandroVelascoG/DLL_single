@@ -54,37 +54,6 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
         }
     });
 
-    // stager.extendStep('tutorialGame', {
-    //     cb: function() {
-    //         console.log('tutorialGame');
-    //         perros();
-    //     }
-    // });
-
-    // stager.extendStep('tiempo', {
-    // cb: function() {
-    //     console.log('tiempo');
-    //     }
-    // });
-    //
-    // stager.extendStep('recompensa', {
-    // cb: function() {
-    //     console.log('recompensa');
-    //     }
-    // });
-
-    // stager.extendStep('quiz', {
-    //     cb: function() {
-    //         console.log('Quiz');
-    //     }
-    // });
-
-    // stager.extendStep('training', {
-    //     cb: function() {
-    //         console.log('Rondas');
-    //     }
-    // });
-
     stager.extendStep('training', {
         cb: function() {
             console.log('Training');
@@ -138,13 +107,34 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
 
       for (var i=1; i < 13; i++) {
         as[i - 1] = 'A' + i + '.jpg';
+      }
+
+      for (var i=1; i < 13; i++) {
         bs[i - 1] = 'B' + i + '.jpg';
+      }
+
+      for (var i=1; i < 13; i++) {
         cs[i - 1] = 'C' + i + '.jpg';
+      }
+
+      for (var i=1; i < 13; i++) {
         ds[i - 1] = 'D' + i + '.jpg';
-        dict[as[i]] = "A";
-        dict[bs[i]] = "B";
-        dict[cs[i]] = "C";
-        dict[ds[i]] = "D";
+      }
+
+      for(var i = 1; i < 13; i++){
+        dict[as[i - 1]] = "A";
+      }
+
+      for(var i = 1; i < 13; i++){
+        dict[bs[i - 1]] = "B";
+      }
+
+      for(var i = 1; i < 13; i++){
+        dict[cs[i - 1]] = "C";
+      }
+
+      for(var i = 1; i < 13; i++){
+        dict[ds[i - 1]] = "D";
       }
 
       var terrier = as.concat(cs);
