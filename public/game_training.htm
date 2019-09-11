@@ -16,9 +16,22 @@
 </head>
     <div id="confirmarRonda" class="modal1">
         <div class="modal-content" align="center" style="top: 800px">
-            <h2>¿Está seguro de que desea terminar la ronda?</h2>
+            <h2>¿Está seguro de que desea terminar ronda?</h2>
                 <button class="button1" id='salir'>Sí</button>
                 <button class="button1" id='quedar'>No</button>
+        </div>
+    </div>
+    <div id="Tutorial1" class="modal1" style="display: block">
+        <div class="modal-content" align="center" style="padding-bottom: 15px; font-size: 13pt">
+            <h2>Tutorial 2/2</h2>
+            Bienvenido al tutorial de las rondas de <i>juego</i>. Su tarea es aprender a clasificar los perros en <b>cuatro</b> categorías. Al finalizar cada ronda usted recibirá retroalimentación para ayudarle en su aprendizaje. Para clasificar cada perro, de click en el menú debajo de cada imagen.
+            <br><br>
+            Por favor preste atención al cuadro de instrucciones en la parte inferior izquierda de su pantalla para avanzar en el tutorial. <br><br>
+            <b> Nota: los perros que verá en este tutorial no serán los que clasificará durante el experimento. </b> <br>
+            <div>
+                <br>
+                <button class="button1" id="cerrarTut1">OK</button>
+            </div>
         </div>
     </div>
     <div style="overflow: auto">
@@ -32,15 +45,10 @@
           <div class="desc">
            <select text-align="center" id="select1">
             <option value="Nada">Elija una opción</option>
-            <option id = "opA1" value="A">Cairn Terrier</option>
-            <option id = "opB1" value="B">Irish Wolfhound</option>
-            <option id = "opC1" value="C">Norwich Terrier</option>
-            <option id = "opD1" value="D">Scottish Deerhound</option>
-<!--            <option id = "opA1" value="A">A</option>
+            <option id = "opA1" value="A">A</option>
             <option id = "opB1" value="B">B</option>
             <option id = "opC1" value="C">C</option>
             <option id = "opD1" value="D">D</option>
--->
            </select>
          </div>
       </div>
@@ -51,15 +59,10 @@
          <div class="desc">
           <select text-align="center" id="select2">
             <option value="Nada">Elija una opción</option>
-            <option id = "opA2" value="A">Cairn Terrier</option>
-            <option id = "opB2" value="B">Irish Wolfhound</option>
-            <option id = "opC2" value="C">Norwich Terrier</option>
-            <option id = "opD2" value="D">Scottish Deerhound</option>
-<!--            <option id = "opA2" value="A">A</option>
+            <option id = "opA2" value="A">A</option>
             <option id = "opB2" value="B">B</option>
             <option id = "opC2" value="C">C</option>
             <option id = "opD2" value="D">D</option>
--->
           </select>
          </div>
       </div>
@@ -70,10 +73,10 @@
          <div class="desc">
           <select text-align="center" id="select3">
             <option value="Nada">Elija una opción</option>
-            <option id = "opA3" value="A">Cairn Terrier</option>
-            <option id = "opB3" value="B">Irish Wolfhound</option>
-            <option id = "opC3" value="C">Norwich Terrier</option>
-            <option id = "opD3" value="D">Scottish Deerhound</option>
+            <option id = "opA3" value="A">A</option>
+            <option id = "opB3" value="B">B</option>
+            <option id = "opC3" value="C">C</option>
+            <option id = "opD3" value="D">D</option>
           </select>
          </div>
       </div>
@@ -84,15 +87,10 @@
          <div class="desc">
           <select text-align="center" id="select4">
             <option value="Nada">Elija una opción</option>
-            <option id = "opA4" value="A">Cairn Terrier</option>
-            <option id = "opB4" value="B">Irish Wolfhound</option>
-            <option id = "opC4" value="C">Norwich Terrier</option>
-            <option id = "opD4" value="D">Scottish Deerhound</option>
-<!--            <option id = "opA4" value="A">A</option>
+            <option id = "opA4" value="A">A</option>
             <option id = "opB4" value="B">B</option>
             <option id = "opC4" value="C">C</option>
             <option id = "opD4" value="D">D</option>
--->
           </select>
          </div>
       </div>
@@ -103,27 +101,22 @@
          <div class="desc">
           <select text-align="center" id= "select5">
             <option value="Nada">Elija una opción</option>
-            <option id = "opA5" value="A">Cairn Terrier</option>
-            <option id = "opB5" value="B">Irish Wolfhound</option>
-            <option id = "opC5" value="C">Norwich Terrier</option>
-            <option id = "opD5" value="D">Scottish Deerhound</option>
-<!--            <option id = "opA5" value="A">A</option>
+            <option id = "opA5" value="A">A</option>
             <option id = "opB5" value="B">B</option>
             <option id = "opC5" value="C">C</option>
             <option id = "opD5" value="D">D</option>
--->
           </select>
          </div>
       </div>
     </div>
 
+
     <div class="column left" style="padding-top: 100px; display: block">
         <div id="cuadroinst" style="border: 5px solid Turquoise; display: block; text-align: center; padding: 10px; font-size: 14pt">
-            <p><b>Ayuda:</b> <span id="inst">
+            <p><span id="inst">Durante las rondas de juego, usted debe clasificar perros de cuatro tipos. Si despliega alguno de los menús  debajo de cada perro, verá que aparecen cuatro categorías. Durante el juego, usted podrá utilizar el botón confirmar en cualquier momento para finalizar la ronda.
+            <br><br>
+            Sin embargo, <b>para avanzar en este tutorial, usted debe clasificar todos los perros para activar el botón "Confirmar".</b></span></p>
         </div>
-    </div>
-
-    <div class="column left" style="padding-top: 100px; display:none">
     </div>
 
     <div class="column middle" style="">
@@ -135,7 +128,7 @@
           <p style="font-size: 13px"><b>Presione aquí para confirmar su clasificación y terminar la ronda</b></p><br>
       </div>
         <div style="text-align: center">
-            <button class="button" id='continuar' style="top:-10px">Confirmar!</button>
+            <button class="button" id='continuar' style="top:-10px;">Confirmar</button>
         </div>
 
     </div>
@@ -165,7 +158,11 @@
           if (event.target.className == "button1"){
               if(event.target.id == "salir"){
                   node.emit('Solicitud', 'terminar');
-              }if(event.target.id == "quedar"){
+              }
+              if(event.target.id == "cerrarTut1"){
+                  node.emit('Solicitud', 'cerrarTut1');
+              }
+              if(event.target.id == "quedar"){
                   node.emit('Solicitud', 'seguir');
               }
               node.emit('Solicitud', 'cerrar');
