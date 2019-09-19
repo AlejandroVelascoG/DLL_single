@@ -463,7 +463,7 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
     });
 
 stager.extendStep('training', {
-    donebutton: false,
+    donebutton: true,
     frame: 'training.htm',
     cb: function(){
 
@@ -658,7 +658,6 @@ stager.extendStep('puntaje', {
 });
 
 stager.extendStep('game', {
-    donebutton: false,
     frame: 'training.htm',
     cb: function(){
 
